@@ -1,0 +1,450 @@
+/* -------------------- Configs -------------------- */
+@font-face {
+	font-family: Azedo;
+	font-weight: bold;
+	src: url("../fonts/Azedo-Bold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: SlimTony;
+	font-weight: bold;
+	src: url("../fonts/Fenotype - SlimTony.otf") format("opentype");
+}
+
+@font-face {
+	font-family: ProximaBold;
+	font-weight: bold;
+	src: url("../fonts/proximanova-bold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: ProximaReg;
+	font-weight: bold;
+	src: url("../fonts/proximanovacond-regular.otf") format("opentype");
+}
+
+@font-face {
+	font-family: Born;
+	font-weight: bold;
+	src: url("../fonts/Born.otf") format("opentype");
+}
+
+@yellow: #ffdc19;
+
+/* -------------------- Base -------------------- */
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+} 
+
+* {
+	box-sizing: border-box;
+	font-stretch: expanded;
+}
+
+
+/* -------------------- Layout -------------------- */
+.mainframe {
+	width: 100%;
+	height: 92vh;
+	background: url('../images/big_1.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 4rem;
+	.text {
+		width: 40%;
+		margin: 0 auto;
+		color: white;
+		text-align: center;
+
+			
+		
+		.head-line {
+			display: inline-block;
+			font-family: ProximaBold;
+			font-size: 2.5rem;
+			text-transform: uppercase;
+			margin: 0 auto;
+			margin-top: 47%;
+			
+		}
+		.foot-line {
+			display: inline-block;
+			font-family: SlimTony;
+			font-size: 4.5rem;
+			margin: 0 auto;
+			
+		}
+	}
+}
+
+.main  {
+	width: 90%;
+	margin: 0 auto 5rem;
+	font-size: 0;
+	vertical-align: top;
+	.header {
+		.name {
+			font-family: ProximaReg;
+			text-transform: uppercase;
+			font-size: 1.5rem;
+			margin-bottom: 0;
+		}
+		.full-underline {
+			border: 0;
+			height: 2px;
+			background-color: @yellow;
+			margin: 1rem 0 3rem 0;
+		}
+	}
+}
+
+.logo-text {
+	color: #000000;
+	float: left;
+	font-family: Azedo;
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	vertical-align: middle;
+}
+
+.compact, .amenu {
+	display: none;
+	float: right;
+	font-size: 1rem;
+	list-style: none;
+}
+
+
+
+/* -------------------- Modules -------------------- */
+
+
+header, footer {
+	font-size: 0;
+	width: 90%;
+	margin: 0 auto;
+	padding: 1rem 0;
+	.logo-image {
+		float: left;
+		display: inline-block;
+		-webkit-filter: invert(100%);
+		-moz-filter: ivert (100%);
+		-o-filter: ivert (100%);
+		-ms-filter: ivert (100%);
+		filter: ivert (100%);
+		margin: 0.5rem;
+	}
+
+	.menu {
+		float: right;
+		ul li {
+			display: inline-block;
+			text-transform: uppercase;
+			padding: 1rem 0;
+			&:hover {
+				background-color: #777777;
+				font-weight: bold;
+			}
+			a {
+				text-decoration: none;
+				color: #000000;
+				font-size: 0.7rem;
+				padding: 1rem;
+			}
+		}
+	}
+}
+
+
+.article {
+	display: inline-block;
+	width: 33%;
+	vertical-align: top;
+	text-align: justify;
+    padding: 0rem 2rem 0rem 2rem;
+	.title {
+		font-size: 2rem;
+		font-family: ProximaBold;
+		color: #000000;
+		text-transform: uppercase;
+		margin-bottom: 0;
+		&:before {
+			content: "\201C\A";
+			white-space: pre;
+			color: @yellow;
+			font-family: ProximaBold;
+			font-size: 7rem;
+			position: absolute;
+			line-height: 0;
+		}
+	}
+}
+.descr {
+	color: black;
+	font-size: 1rem;
+	font-family: Born;
+}	
+
+
+.about-pic {
+	width: 100%;
+	height: 92vh;
+	background: url('../images/about_big.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 4rem;
+	.v-text {
+		text-transform: uppercase;
+		font-family: ProximaBold;
+		font-size: 2.5rem;
+		color: white;
+		width: 33%;
+		transform: rotate(-90deg);
+		position: relative;
+		top: 50%;
+    	left: 70%;
+    	.small-line {
+    		width: 20%;
+    		height: 1rem;
+    		float: left;
+    		border: 0;
+    		background-color: @yellow;
+    	}
+	}
+
+}
+
+.services {
+	.article {
+		width: 25%;
+		h3 {
+			font-family: ProximaReg;
+			display: inline-block;
+			font-size: 2.5rem;
+			margin: 0;
+		}
+		.price {
+			font-family: proximaBold;
+			margin-bottom: 1rem;
+			&:before {
+				content: "($";
+			}
+			&:after {
+				content: ")";
+			}
+		}
+		.description {
+			display: block;
+		}
+	}
+}
+
+.lookbook {
+	img {
+		width: 100%;
+	}
+	font-size: 0;
+	.gallery {
+		text-align: center;
+		
+		margin: 0 auto;
+		.left {
+			width: 40.1%;
+			display: inline-block;
+		}
+		.right {
+			width: 59%;
+			display: inline-block;
+			.top {
+				div {
+					width: 50%;
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+.reserv {
+	.form {
+		div {
+			display: inline-block;
+			vertical-align: top;
+			padding: 1rem;
+		}
+		.left{
+			width: 33%;
+		}
+		.right{
+			width: 66%;
+		}
+		input, textarea {
+			line-height: 2.2rem;
+			font-family: Born;
+			&::-webkit-input-placeholder {
+				color:black;
+			}
+			&::-moz-placeholder {
+				color:black;
+			}
+			&:-ms-input-placeholder {
+				color:black;
+			}
+			font-size: 0.8rem;
+			margin: 0 0 1.5rem 0;
+			width: 100%;
+			display: block;
+			padding: 0 0.5rem;
+		}
+		textarea {
+			height: 14.8rem;
+			resize: none;
+		}
+		.button {
+			button {
+				font-family: ProximaBold;
+				font-size: 1rem;
+				line-height: 2.2rem;
+				width: 11rem;
+				border-radius: 0;
+				border: 0;
+				background-color: @yellow;
+				text-transform: uppercase;
+				color: white;	
+			}
+			padding: 0 1rem;
+		}
+	}
+}
+
+.map {
+	width: 100%;
+	height: 90vh;
+	// background: none;
+	//background-size: cover;
+	margin-bottom: 0;
+	.tooltip{
+		div {
+			width: 100%;
+		}
+		.logo-text {
+			margin: 0 0 1rem 0.3rem;
+		}
+		.address {
+			font-family: Born;
+			font-size: 0.85rem;
+			margin-bottom: 1rem;
+		}
+		background: #ffffff;
+		position: relative;
+		padding: 0.3rem;
+		text-align: center;
+		width: 10rem;
+		top: 11rem;
+		left: 44.5rem;
+		&:after {
+			display: block;
+			content: "";
+			position: absolute;
+			width: 0;
+			left: 4rem;
+			border: 1rem solid transparent;
+			border-top-color: #ffffff;	
+		}
+	}
+}
+
+footer {
+	width: 100%;
+	background: #000000;
+	.logo-image {
+		-webkit-filter: invert(0);
+		-moz-filter: ivert (0);
+		-o-filter: ivert (0);
+		-ms-filter: ivert (0);
+		filter: ivert (0);
+	}
+	.logo-text {
+		color: #ffffff;
+	}
+
+	.menu {
+		ul li {
+			a {
+				color: #ffffff;
+			}
+		}
+	}
+}
+
+/* -------------------- Media queries -------------------- */
+
+@media (max-width: 800px) {
+	.menu {
+		display: none;
+	}
+
+	.amenu {
+		font-family: ProximaBold;
+		margin: 1% 0;
+		display: block;
+		float: right;
+		font-size: 1rem;
+		position: absolute;
+		right: 5%;
+		background: #ffffff;
+		
+		a {
+			float: right;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: #000000;
+		}
+
+		&:hover {
+			.compact {
+				display: block;
+				list-style: none;
+			}
+			li {
+				padding: 10% 0;
+			}
+		}
+	}
+
+	.article {
+		display: block;
+		margin: 1% auto;
+		width: 100%;
+	}
+
+	.services .article {
+		width: 100%;
+	}
+
+
+	.v-text {
+		top: 60%;
+		left: 55%;
+		.small-line {
+			display: none;
+		}
+	}
+
+	.reserv .form .left, .reserv .form .right {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	.reserv .form div {
+		width: 100%;
+		margin: 0 auto;
+		display: block;
+		text-align: center;
+	}
+}
